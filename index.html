@@ -1,84 +1,63 @@
 <DOCTYPE html>
 <html>
 <head> <!-- READING EXTERNAL FILES GUIDE: https://www.html5rocks.com/en/tutorials/file/dndfiles/ -->
-  <p>Load Build File: <input id="files" type="file" name="files[]" /></p><output id="list"></output>
-  <script>
-  function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
-  <!-- <table>
-	<tr><td>Text to Save:</td></tr>
-	<tr>
-		<td colspan="3">
-			<textarea id="inputTextToSave" cols="80" rows="25"></textarea>
-		</td>
-	</tr>
-	<tr>
-		<td>Filename to Save As:</td>
-		<td><input id="inputFileNameToSaveAs"></input></td>
-		<td><button onclick="saveTextAsFile()">Save Text to File</button></td>
-	</tr>
-	<tr>
-		<td>Select a File to Load:</td>
-		<td><input type="file" id="fileToLoad"></td>
-		<td><button onclick="loadFileAsText()">Load Selected File</button><td>
-	</tr>
-</table>
-
-<script type="text/javascript">
-
-function saveTextAsFile()
-{
-	var textToSave = document.getElementById("inputTextToSave").value;
-	var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-	var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
-
-	var downloadLink = document.createElement("a");
-	downloadLink.download = fileNameToSaveAs;
-	downloadLink.innerHTML = "Download File";
-	downloadLink.href = textToSaveAsURL;
-	downloadLink.onclick = destroyClickedElement;
-	downloadLink.style.display = "none";
-	document.body.appendChild(downloadLink);
-
-	downloadLink.click();
-}
-
-function destroyClickedElement(event)
-{
-	document.body.removeChild(event.target);
-}
-
-function loadFileAsText()
-{
-	var fileToLoad = document.getElementById("fileToLoad").files[0];
-
-	var fileReader = new FileReader();
-	fileReader.onload = function(fileLoadedEvent) 
-	{
-		var textFromFileLoaded = fileLoadedEvent.target.result;
-		document.getElementById("inputTextToSave").value = textFromFileLoaded;
-	};
-	fileReader.readAsText(fileToLoad, "UTF-8");
-}
-
-</script>
-
--->
-  
-  </head>
-  </html>
+	<title>Perks Builder</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th id="strength">Strength</th>
+			<th id="perception">Perception</th>
+			<th id="endurance">Endurance</th>
+			<th id="charisma">Charisma</th>
+			<th id="intelligence">Intelligence</th>
+			<th id="luck">Luck</th>
+		</tr>
+		<tr>
+			<th id="ironFist">Iron Fist</th>
+			<th id="pickpocket">Pickpocket</th>
+			<th id="toughness">Toughness</th>
+			<th id="capCollector">Cap Collector</th>
+			<th id="vans">V.A.N.S</th>
+			<th id="gunslinger"Gunslinger</th>
+			<th id="fortuneFinder">Fortune Finder</th>
+		</tr>
+		<tr>
+			<th id="bigLeagues">Big Leagues</th>
+			<th id="rifleman">Rifleman</th>
+			<th id="leadBelly">Lead Belly</th>
+			<th id="ladyKiller">Lady Killer</th>
+			<th id="medic">Medic</th>
+			<th id="commando">Commando</th>
+			<th id="scrounger">Scrounger</th>
+		</tr>
+		<tr>
+			<th id="armorer">Armorer</th>
+			<th id="awareness">Awareness</th>
+			<th id="lifegiver">Lifegiver</th>
+			<th id="loneWanderer">Lone Wanderer</th>
+			<th id="gunNut">Gun Nut</th>
+			<th id="sneak">Sneak</th>
+			<th id="bloodyMess">Bloody Mess</th>
+		</tr>
+		<tr>
+			<th id="blacksmith">Blacksmith</th>
+			<th id="locksmith">Locksmith</th>
+			<th id="chemResistant">Chem Resistant</th>
+			<th id="attackDog">Attack Dog</th>
+			<th id="hacker">Hacker</th>
+			<th id="misterSandman">Mister Sandman</th>
+			<th id="mysteriousStranger">Mysterious Stranger</th>
+		</tr>
+		<tr>
+			<th id="heavyGunner">Heavy Gunner</th>
+			<th id="demoExpert">Demolition Expert</th>
+			<th id="aquaboy">Aquaboy</th>
+			<th id="animalFriend">Animal Friend</th>
+			<th id="scrapper">Scrapper</th>
+			<th id="actionBoy">Action Boy</th>
+			<th id="idiotSavant">Idiot Savant</th>
+		</tr>
+		<tr>
+</html>
+</DOCTYPE>
